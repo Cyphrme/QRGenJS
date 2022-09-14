@@ -1,10 +1,10 @@
 # qrgenjs
 
+https://cyphrme.github.io/qrgenjs/
+
 Code used for https://cyphr.me/qrgen.
 
-https://cyphrme.github.io/qrgen/
-
-An unofficial fork of our favorite Javascript QR code generator.  
+An unofficial fork with minor tweaks to our favorite Javascript QR code generator.  
 https://www.nayuki.io/page/qr-code-generator-library
 
 See also:
