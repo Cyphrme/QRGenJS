@@ -17,6 +17,10 @@ https://github.com/nayuki/QR-Code-generator/issues/155
 
 
 
+Great article about how QR codes work:
+
+https://typefully.com/DanHollick/qr-codes-T7tLlNi
+
 ----------------------------------------------------------------------
 # Attribution, Trademark notice, and License
 qrgen Copyright (c) Project Nayuki. (MIT License)
