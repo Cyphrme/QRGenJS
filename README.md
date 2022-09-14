@@ -1,4 +1,4 @@
-# qrgen
+# qrgenjs
 
 Code used for https://cyphr.me/qrgen.
 
