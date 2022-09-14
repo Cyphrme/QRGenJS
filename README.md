@@ -1,5 +1,7 @@
 # qrgen
 
+Code used for https://cyphr.me/qrgen.
+
 https://cyphrme.github.io/qrgen/
 
 An unofficial fork of our favorite Javascript QR code generator.  
