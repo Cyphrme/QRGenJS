@@ -34,37 +34,17 @@ esbuild qrgen_no_mod.js --minify --outfile=qrgen.min.js && cat module_append.txt
 ```
 
 
-## 1.8.0
-The root files do not use 1.8.0, but to build it, this is how it is done: 
-
-```
-tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 1.8.0/qrcodegen.ts --outFile 1.8.0/qrgen.js
-esbuild 1.8.0/qrgen.js --minify --outfile=1.8.0/qrgen.min.js && cat module_append.txt >> 1.8.0/qrgen.min.js
-
-```
-
-
 
 ## 1.8.0 Demo
 Github link to live page: https://cyphrme.github.io/qrgenjs/1.8.0/demo/demo.html
 
+The root files do not use 1.8.0, but to build it, this is how it is done: 
 
 ```sh
 tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 1.8.0/*.ts --outDir 1.8.0
 esbuild 1.8.0/qrcodegen.js --minify --outfile=1.8.0/qrcodegen.min.js && cat module_append.txt >> 1.8.0/qrcodegen.min.js
 ```
 
-
-
-
-
-#### Compiling TypeScript to Javascript with the demo and qrcodegen combined:
-We don't recommend if expecting to import individual Javascript files in your project.
-
-```sh
-tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 qrcodegen.ts qrcodegen-input-demo.ts
-tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 qrcodegen.ts qrcodegen-output-demo.ts
-```
 
 
 ## UMD Module:
