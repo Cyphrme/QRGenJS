@@ -34,9 +34,11 @@ esbuild qrgen_no_mod.js --minify --outfile=qrgen.min.js && cat module_append.txt
 ```
 
 
-## 1.8.0 
+## 1.8.0
+The root files do not use 1.8.0, but to build it, this is how it is done: 
+
 ```
-tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 1.8.0/ts/qrcodegen.ts --outFile 1.8.0/qrgen.js
+tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 1.8.0/qrcodegen.ts --outFile 1.8.0/qrgen.js
 esbuild 1.8.0/qrgen.js --minify --outfile=1.8.0/qrgen.min.js && cat module_append.txt >> 1.8.0/qrgen.min.js
 
 ```
@@ -47,11 +49,12 @@ esbuild 1.8.0/qrgen.js --minify --outfile=1.8.0/qrgen.min.js && cat module_appen
 Github link to live page: https://cyphrme.github.io/qrgenjs/1.8.0/demo/demo.html
 
 
-Currently, we don't know how to make `app.js` with `tsc` (because of compile issues with dependencies), so to manually split the file, grab `var app; (function (app) {` (around line 838) and down into `app.js` and include  `"use strict";` as the first line *before* minification.  
-
 ```sh
-tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 nayuki/ts/qrcodegen.ts nayuki/ts/qrcodegen-input-demo.ts nayuki/ts/qrcodegen.ts --outFile 1.8.0_demo/qrgen.js
+tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 1.8.0/*.ts --outDir 1.8.0
+esbuild 1.8.0/qrcodegen.js --minify --outfile=1.8.0/qrcodegen.min.js && cat module_append.txt >> 1.8.0/qrcodegen.min.js
 ```
+
+
 
 
 
