@@ -1,14 +1,9 @@
 # qrgenjs
-
-https://cyphrme.github.io/qrgenjs/
+https://cyphrme.github.io/qrgenjs
 
 Code used for https://cyphr.me/qrgen.
 
 An unofficial fork with minor tweaks to our favorite Javascript QR code generator.  
-https://www.nayuki.io/page/qr-code-generator-library
-
-See also:
-Typescript repo:
 https://github.com/nayuki/QR-Code-generator/tree/master/typescript-javascript
 
 
@@ -17,14 +12,8 @@ https://github.com/nayuki/QR-Code-generator/issues/155
 
 
 
-Great article about how QR codes work:
-
-https://typefully.com/DanHollick/qr-codes-T7tLlNi
-
-
 # Developement
-TypeScript Compiling, `esbuild` minification, and UMD Module.
-
+`esbuild` minification and UMD Module.
 
 The demo (index.html) is with "old" code, but works for our purposes.  
 
@@ -36,7 +25,8 @@ esbuild qrgen_no_mod.js --minify --outfile=qrgen.min.js && cat module_append.txt
 
 
 ## 1.8.0 Demo
-Github link to live page: https://cyphrme.github.io/qrgenjs/1.8.0/demo/demo.html
+[Github link to live page.](https://cyphrme.github.io/qrgenjs/1.8.0/cyphrme_demo.html) 
+[Unmodified Nayuki](https://cyphrme.github.io/qrgenjs/1.8.0/demo.html)
 
 The root files do not use 1.8.0, but to build it, this is how it is done: 
 
@@ -48,7 +38,7 @@ esbuild 1.8.0/qrcodegen.js --minify --outfile=1.8.0/qrcodegen.min.js && cat modu
 
 
 ## UMD Module:
-Making file/module accessible through the global 'window'.
+Making file accessible through using not modules or modules.
 Taken from
 https://github.com/paulmillr/noble-secp256k1/releases/tag/1.6.3
 and
@@ -68,6 +58,9 @@ https://github.com/evanw/esbuild/issues/507#issuecomment-1221091273
 	});
 }));
 ```
+
+## Other Resources
+Great article about how QR codes work: https://typefully.com/DanHollick/qr-codes-T7tLlNi
 
 ----------------------------------------------------------------------
 # Attribution, Trademark notice, and License
