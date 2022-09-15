@@ -11,7 +11,6 @@ Github issue:
 https://github.com/nayuki/QR-Code-generator/issues/155
 
 
-
 # Developement
 `esbuild` minification and UMD Module.
 
@@ -21,7 +20,6 @@ The demo (index.html) is with "old" code, but works for our purposes.
 esbuild qrgen_no_mod.js --minify --outfile=qrgen.min.js && cat module_append.txt >> qrgen.min.js
 
 ```
-
 
 
 ## 1.8.0 Demo
@@ -37,7 +35,7 @@ esbuild 1.8.0/qrcodegen.js --minify --outfile=1.8.0/qrcodegen.min.js && cat modu
 
 
 
-## UMD Module:
+## UMD Module
 Making file accessible through using not modules or modules.
 Taken from
 https://github.com/paulmillr/noble-secp256k1/releases/tag/1.6.3
