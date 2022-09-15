@@ -22,12 +22,8 @@ Great article about how QR codes work:
 https://typefully.com/DanHollick/qr-codes-T7tLlNi
 
 
-
-
-
 # Developement
-
-TypeScript Compiling, `esbuild` minification and UMD Module.
+TypeScript Compiling, `esbuild` minification, and UMD Module.
 
 
 The demo (index.html) is with "old" code, but works for our purposes.  
@@ -48,6 +44,9 @@ esbuild 1.8.0/qrgen.js --minify --outfile=1.8.0/qrgen.min.js && cat module_appen
 
 
 ## 1.8.0 Demo
+Github link to live page: https://cyphrme.github.io/qrgenjs/1.8.0/demo/demo.html
+
+
 Currently, we don't know how to make `app.js` with `tsc` (because of compile issues with dependencies), so to manually split the file, grab `var app; (function (app) {` (around line 838) and down into `app.js` and include  `"use strict";` as the first line *before* minification.  
 
 ```sh
