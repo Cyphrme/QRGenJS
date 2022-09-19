@@ -21,8 +21,6 @@
  *   Software.
  */
 
-
-
 "use strict";
 var app = new function() {
 
@@ -161,14 +159,8 @@ var app = new function() {
 		redrawQrCode();
 	}
 
-
 	initialize();
-
-
-
 };
-
-
 
 
 (function(global, factory) {
