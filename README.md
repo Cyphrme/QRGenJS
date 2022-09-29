@@ -22,8 +22,9 @@ esbuild qrgen_no_mod.js --minify --outfile=qrgen.min.js && cat module_append.txt
 ```
 
 ## 1.8.0 Demo
-[Github link to live page.](https://cyphrme.github.io/qrgenjs/1.8.0/cyphrme_demo.html) 
-[Unmodified Nayuki](https://cyphrme.github.io/qrgenjs/1.8.0/demo.html)
+All links are in this repo
+- [Cyphrme changes 1.8.0 (Live page)](https://cyphrme.github.io/qrgenjs/1.8.0/cyphrme_demo.html) 
+- [Unmodified Nayuki with compiling to get it to work (Live page)](https://cyphrme.github.io/qrgenjs/1.8.0/demo.html)
 
 The root files do not use 1.8.0, but to build it, this is how it is done: 
 
