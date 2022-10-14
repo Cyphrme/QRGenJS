@@ -22,9 +22,6 @@
  */
 
 
-
-
-
 "use strict";
 var qrcodegen = new function() {
 

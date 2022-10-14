@@ -1065,8 +1065,8 @@ var qrcodegen = new function () {
 
 
 /**
- * Making file/module accessible through the global 'window'.
- * Taken from
+ * Making module accessible or if not module through the global 'window'
+ * ("global" gets renamed to "window" for browsers). Taken from
  * https://github.com/paulmillr/noble-secp256k1/releases/tag/1.6.3
  * and
  * https://stackoverflow.com/a/63751410/15147681
