@@ -1064,15 +1064,6 @@ var qrcodegen = new function () {
 };
 
 
-/**
- * Making module accessible or if not module through the global 'window'
- * ("global" gets renamed to "window" for browsers). Taken from
- * https://github.com/paulmillr/noble-secp256k1/releases/tag/1.6.3
- * and
- * https://stackoverflow.com/a/63751410/15147681
- * See also:
- * https://github.com/evanw/esbuild/issues/507#issuecomment-1221091273
- */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 		typeof define === 'function' && define.amd ? define(['exports'], factory) :

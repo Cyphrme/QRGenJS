@@ -35,7 +35,7 @@ esbuild 1.8.0/qrcodegen.js --minify --outfile=1.8.0/qrcodegen.min.js && cat modu
 
 ## UMD Module
 Making file accessible through using not modules or modules.
-Taken from
+https://github.com/umdjs/umd
 https://github.com/paulmillr/noble-secp256k1/releases/tag/1.6.3
 and
 https://stackoverflow.com/a/63751410/15147681
