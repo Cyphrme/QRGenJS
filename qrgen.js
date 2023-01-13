@@ -22,7 +22,6 @@
  */
 
 "use strict";
-
 var qrcodegen = new function () {
 
 	/*---- QR Code symbol class ----*/
@@ -1064,11 +1063,11 @@ var qrcodegen = new function () {
 
 };
 
-
+//////////////////////////////Regex_match_for_truncation_for_umd
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 		typeof define === 'function' && define.amd ? define(['exports'], factory) :
-		(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.QRGen = {}));
+		(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.qrgen = {}));
 })(this, (function (exports) {
 	exports.QrCode = qrcodegen.QrCode;
 	exports.QrSegment = qrcodegen.QrSegment;

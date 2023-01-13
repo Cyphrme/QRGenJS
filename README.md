@@ -11,15 +11,10 @@ Github issue:
 https://github.com/nayuki/QR-Code-generator/issues/155
 
 
-# Developement
-`esbuild` minification and UMD Module.
 
-The demo (index.html) is with "old" code, but works for our purposes.  
-
-```javascript
-esbuild qrgen_no_mod.js --minify --outfile=qrgen.min.js && cat module_append.txt >> qrgen.min.js
-
-```
+# Development
+The demo (index.html) is with an older version, but it works and since the new
+version works differently we're keeping the old version.  
 
 ## 1.8.0 Demo
 All links are in this repo
@@ -29,31 +24,32 @@ All links are in this repo
 The root files do not use 1.8.0, but to build it, this is how it is done: 
 
 ```sh
-tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 1.8.0/*.ts --outDir 1.8.0
-esbuild 1.8.0/qrcodegen.js --minify --outfile=1.8.0/qrcodegen.min.js && cat module_append.txt >> 1.8.0/qrcodegen.min.js
+(
+	cd 1.8.0
+tsc --strict --lib DOM,DOM.Iterable,ES6 --target ES6 *.ts 
+esbuild qrcodegen.js --minify --outfile=qrcodegen.min.js && cat module_append.txt >> qrcodegen.min.js
+)
 ```
 
 ## UMD Module
-Making file accessible through using not modules or modules.
-https://github.com/umdjs/umd
-https://github.com/paulmillr/noble-secp256k1/releases/tag/1.6.3
-and
-https://stackoverflow.com/a/63751410/15147681
-See also:
-https://github.com/evanw/esbuild/issues/507#issuecomment-1221091273
+See https://github.com/Cyphrme/UMD_tutorial.  In short, `esbuild` has a bug with
+UMD so modules have to be manually done.  See `build.sh`.
 
-```javascript
-(function(global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-		typeof define === 'function' && define.amd ? define(['exports'], factory) :
-		(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.qrgen = qrcodegen));
-})(this, (function(exports) {
 
-	Object.defineProperty(exports, '__esModule', {
-		value: true
-	});
-}));
-```
+# New
+# Truncate UMD from file to add it back in after minifaciton.  
+file=urlform.js
+match="//////////////////////////////Regex_match_for_truncation_for_umd"
+line_num=$(grep -n "$match" $file | cut -d : -f 1)
+echo "Line number for truncation: $line_num"
+head -n $(($line_num - 1)) $file > urlform_nomod.min.js # `min.js` avoids watch loop.  
+
+
+esbuild urlform_nomod.min.js --bundle --format=esm --platform=browser --minify --sourcemap --outfile=urlform.min.js
+#cat module_append.js >> urlform.min.js
+
+
+
 
 
 ## Other Resources
