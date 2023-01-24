@@ -51,9 +51,15 @@ esbuild urlform_nomod.min.js --bundle --format=esm --platform=browser --minify -
 
 
 
-
 ## Other Resources
 Great article about how QR codes work: https://typefully.com/DanHollick/qr-codes-T7tLlNi
+
+
+# Why nayuki and not others?
+Google's top result for "qrcode javascipt",
+https://github.com/davidshimjs/qrcodejs, is junk. It has alphanumeric encoding
+issues and the library hasn't been updated in 5 years despite a stream of
+issues.
 
 
 ----------------------------------------------------------------------
