@@ -9,8 +9,8 @@ echo "Line number for truncation: $line_num"
 head -n $(($line_num - 1)) $file > nomod.js
 
 
-esbuild nomod.js --minify --outfile=$minfile
-esbuild qrapp.js --minify --outfile=qrapp.min.js
+esbuild nomod.js --minify --sourcemap --outfile=$minfile
+esbuild qrapp.js --minify --sourcemap --outfile=qrapp.min.js
 
 rm nomod.js
 
