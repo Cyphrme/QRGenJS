@@ -1,7 +1,7 @@
 QR Code generator library (JavaScript) (qrgen)
 
 Additions by Cyphr.me 2022
-https://github.com/Cyphrme/qrgenjs
+https://github.com/Cyphrme/QRGenJS
 
 Copyright (c) Project Nayuki. (MIT License)
 https://www.nayuki.io/page/qr-code-generator-library
